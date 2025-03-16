@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guillermo Avila Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-controls">
+        <div class="language-toggle">
+            <button id="language-toggle-btn" aria-label="Cambiar idioma / Change language">
+                <span class="current-lang">ES</span>
+                <i class="fas fa-language"></i>
+            </button>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <h1>Guillermo Avila</h1>
+            <p data-i18n="header_title">Portfolio Web</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#inicio" data-i18n="nav_home">Inicio</a>
+            <a href="#sobremi" data-i18n="nav_about">Sobre mí</a>
+            <a href="#proyectos" data-i18n="nav_projects">Proyectos</a>
+            <a href="#habilidades" data-i18n="nav_skills">Habilidades</a>
+            <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="container">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="img/PXL_20240215_101848640.jpg" alt="Guillermo Avila" loading="lazy">
+                    </div>
+                    <div class="profile-info">
+                        <h2 data-i18n="profile_title">Ing. Guillermo Avila</h2>
+                        <p class="subtitle" data-i18n="profile_subtitle">Ingeniero en Sistemas Computacionales</p>
+                        <p class="description" data-i18n="profile_description">
+                            Desarrollador web e IoT apasionado por crear soluciones innovadoras y eficientes.
+                        </p>
+    
+                        <!-- Botones de Contacto -->
+                        <div class="contact-buttons">
+                            <a href="mailto:derekjgag@gmail.com" class="btn btn-primary">
+                                <i class="fas fa-envelope"></i> <span data-i18n="btn_email">Correo</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/derek-jes%C3%BAs-guillermo-%C3%A1vila-garc%C3%ADa-12a076261/" target="_blank" class="btn btn-secondary">
+                                <i class="fab fa-linkedin"></i> <span data-i18n="btn_linkedin">LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/Derekodev" target="_blank" class="btn btn-secondary">
+                                <i class="fab fa-github"></i> <span data-i18n="btn_github">GitHub</span>
+                            </a>
+                        </div>
+
+                        <br>
+                        
+                        <div class="skills-highlights">
+                            <div class="skill-item">
+                                <i class="fas fa-code"></i>
+                                <span data-i18n="skill_web">Desarrollo web (HTML5, CSS3, JS, PHP, MySQL)</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-network-wired"></i>
+                                <span data-i18n="skill_networks">Configuración y mantenimiento de redes (OLT, ONU)</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-cogs"></i>
+                                <span data-i18n="skill_automation">Automatización de procesos (CRMINBOX, Wisphub)</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-language"></i>
+                                <span data-i18n="skill_english">Inglés - Nivel B2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="projects-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="projects_title">Proyectos</h2>
+                
+                <div class="projects-grid">
+                    <!-- Proyecto 1: Agar.IA -->
+                    <div class="project-card" id="project1">
+                        <div class="project-header">
+                            <i class="fas fa-vial"></i>
+                            <h3 data-i18n="project1_title">Agar.IA</h3>
+                        </div>
+                        <p class="project-summary" data-i18n="project1_summary">Sistema de conteo de bacterias en tiempo real con inteligencia artificial</p>
+                        <button class="details-toggle" aria-label="Ver detalles">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="project-details">
+                            <p data-i18n="project1_details">
+                                Proyecto hecho en colaboración con la facultad de ciencias bioquímicas de la universidad Itmaz para participar en el Innovatec 2024.
+                                Consiste en una aplicación de Python que funciona como un contador de bacterias en cajas petri.
+                            </p>
+                        </div>
+                    </div>
+                
+                    <!-- Proyecto 2: Punto de Venta -->
+                    <div class="project-card" id="project2">
+                        <div class="project-header">
+                            <i class="fas fa-cash-register"></i>
+                            <h3 data-i18n="project2_title">Punto de venta</h3>
+                        </div>
+                        <p class="project-summary" data-i18n="project2_summary">Aplicación desktop de sistema de caja hecha con C#</p>
+                        <button class="details-toggle" aria-label="Ver detalles">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="project-details">
+                            <p data-i18n="project2_details">
+                                Proyecto hecho como parte de la materia de ingeniería de software.
+                                Consiste en un sistema de caja y menú interactivo para que los clientes puedan realizar sus órdenes.
+                            </p>
+                        </div>
+                    </div>
+                
+                    <!-- Proyecto 3: Sistema de Gestión de Tickets -->
+                    <div class="project-card" id="project3">
+                        <div class="project-header">
+                            <i class="fas fa-ticket-alt"></i>
+                            <h3 data-i18n="project3_title">Sistema de gestión de tickets</h3>
+                        </div>
+                        <p class="project-summary" data-i18n="project3_summary">Una aplicación web de gestión de tickets<br>hecha con HTML5, CSS, JS, PHP y MySQL</p>
+                        <button class="details-toggle" aria-label="Ver detalles">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="project-details">
+                            <p data-i18n="project3_details">
+                                Proyecto hecho para la empresa SE Auditores y Consultores con HTML, CSS, JavaScript y PHP del lado del servidor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="skills-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="skills_title">Habilidades</h2>
+                
+                <div class="tech-carousel-container">
+                    <h3 data-i18n="tech_title">Tecnologías utilizadas</h3>
+                    <div class="tech-carousel">
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <h4 data-i18n="tech1_title">HTML5</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5">
+                                <p data-i18n="tech1_desc">Lenguaje de marcado estándar para la web</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech2_title">CSS3</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3">
+                                <p data-i18n="tech2_desc">Hojas de estilo en cascada</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech3_title">JavaScript</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+                                <p data-i18n="tech3_desc">Lenguaje de programación para interactividad</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech4_title">PHP</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
+                                <p data-i18n="tech4_desc">Lenguaje de programación del lado del servidor</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech5_title">MySQL</h4>
+                                <img src="https://wiki.cifprodolfoucha.es/images/8/8e/Mysql_logo.png" alt="MySQL">
+                                <p data-i18n="tech5_desc">Base de datos relacional</p>
+                            </div>
+
+                            <!-- Duplicados para loop infinito -->
+                            <div class="tech-item">
+                                <h4 data-i18n="tech1_title">HTML5</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5">
+                                <p data-i18n="tech1_desc">Lenguaje de marcado estándar para la web</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech2_title">CSS3</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3">
+                                <p data-i18n="tech2_desc">Hojas de estilo en cascada</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech3_title">JavaScript</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+                                <p data-i18n="tech3_desc">Lenguaje de programación para interactividad</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech4_title">PHP</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
+                                <p data-i18n="tech4_desc">Lenguaje de programación del lado del servidor</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech5_title">MySQL</h4>
+                                <img src="https://wiki.cifprodolfoucha.es/images/8/8e/Mysql_logo.png" alt="MySQL">
+                                <p data-i18n="tech5_desc">Base de datos relacional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="container">
+            <p>&copy; 2025 - <span data-i18n="footer_rights">Todos los derechos reservados</span></p>
+            <div class="contact-links">
+                <a href="mailto:derekjgag@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i> <span data-i18n="btn_email">Correo</span>
+                </a>
+                <a href="https://www.linkedin.com/in/derek-jes%C3%BAs-guillermo-%C3%A1vila-garc%C3%ADa-12a076261/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i> <span data-i18n="btn_linkedin">LinkedIn</span>
+                </a>
+                <a href="https://drive.google.com/tu-curriculum" target="_blank" rel="noopener noreferrer" aria-label="Currículum">
+                    <i class="fas fa-file-alt"></i> <span data-i18n="btn_cv">Currículum</span>
+                </a>
+                <a href="https://github.com/Derekodev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i> <span data-i18n="btn_github">GitHub</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Translations (debe cargarse primero) -->
+    <script src="translations.js"></script>
+    <!-- Custom JS (se carga después) -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Theme toggle functionality
+    const themeToggleBtn = document.getElementById("theme-toggle-btn")
+  
+    // Language functionality
+    const languageToggleBtn = document.getElementById("language-toggle-btn")
+    const currentLangSpan = document.querySelector(".current-lang")
+  
+    // Eliminar el código que intenta cargar translations.json
+    // Reemplazar:
+    // let translations; // Declare translations variable
+  
+    // fetch('translations.json')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     translations = data;
+  
+    //     // ... resto del código ...
+    //   })
+    //   .catch(error => console.error("Error loading translations:", error));
+  
+    // Con:
+    // Detect browser language
+    function detectBrowserLanguage() {
+      const browserLang = navigator.language || navigator.userLanguage
+      return browserLang.startsWith("es") ? "es" : "en"
+    }
+  
+    // Get saved language or detect browser language
+    let currentLang = localStorage.getItem("language") || detectBrowserLanguage()
+  
+    // Update UI with the current language
+    function updateLanguageUI() {
+      currentLangSpan.textContent = currentLang.toUpperCase()
+      document.documentElement.setAttribute("lang", currentLang)
+    }
+  
+    // Apply translations
+    // Eliminar esta línea que está sobrescribiendo las traducciones globales:
+    // let translations = {}; // Declare translations variable
+  
+    // Reemplazar con:
+    // Verificar que las traducciones estén disponibles globalmente
+    if (typeof translations === "undefined") {
+      console.error(
+        "Error: translations no está definido. Asegúrate de que translations.js se cargue antes que script.js",
+      )
+      // Crear un objeto vacío para evitar errores
+      window.translations = {
+        es: { btn_view_more: "Ver más", btn_view_less: "Ver menos" },
+        en: { btn_view_more: "View more", btn_view_less: "View less" },
+      }
+    }
+    function applyTranslations() {
+      const elements = document.querySelectorAll("[data-i18n]")
+      elements.forEach((element) => {
+        const key = element.getAttribute("data-i18n")
+        // Check if translations[currentLang] exists before accessing it
+        if (typeof translations !== "undefined" && translations[currentLang] && translations[currentLang][key]) {
+          element.textContent = translations[currentLang][key]
+        }
+      })
+  
+      // Update toggle button text for projects
+      const detailsToggles = document.querySelectorAll(".details-toggle")
+      detailsToggles.forEach((toggle) => {
+        const card = toggle.closest(".project-card")
+        if (card.classList.contains("active")) {
+          toggle.setAttribute("aria-label", translations[currentLang].btn_view_less)
+        } else {
+          toggle.setAttribute("aria-label", translations[currentLang].btn_view_more)
+        }
+      })
+    }
+  
+    // Initialize language
+    updateLanguageUI()
+    // Descomentar estas líneas para aplicar las traducciones:
+    // applyTranslations() // Commented out because translations is not defined
+    // Cambiar a:
+    applyTranslations()
+  
+    // Toggle language when button is clicked
+    languageToggleBtn.addEventListener("click", () => {
+      currentLang = currentLang === "es" ? "en" : "es"
+      localStorage.setItem("language", currentLang)
+      updateLanguageUI()
+      // Y también descomentar:
+      // applyTranslations() // Commented out because translations is not defined
+      // Cambiar a:
+      applyTranslations()
+      console.log("Language changed to:", currentLang) // Debug log
+    })
+  
+    // Project details toggle functionality
+    const projectCards = document.querySelectorAll(".project-card")
+  
+    projectCards.forEach((card) => {
+      const toggleBtn = card.querySelector(".details-toggle")
+  
+      toggleBtn.addEventListener("click", () => {
+        // Close all other cards
+        projectCards.forEach((otherCard) => {
+          if (otherCard !== card) {
+            otherCard.classList.remove("active")
+          }
+        })
+  
+        // Toggle the clicked card
+        card.classList.toggle("active")
+  
+        // Update the toggle button text based on the current language
+        // Check if translations[currentLang] exists before accessing it
+        if (typeof translations !== "undefined") {
+          if (card.classList.contains("active")) {
+            toggleBtn.setAttribute("aria-label", translations[currentLang].btn_view_less)
+          } else {
+            toggleBtn.setAttribute("aria-label", translations[currentLang].btn_view_more)
+          }
+        }
+      })
+    })
+    //   })
+    //   .catch((error) => console.error("Error loading translations:", error))
+  
+    // Check for saved theme preference or use preferred color scheme
+    const savedTheme = localStorage.getItem("theme")
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark")
+    } else if (savedTheme === "light") {
+      document.body.classList.remove("dark")
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.body.classList.add("dark")
+    }
+  
+    // Toggle theme when button is clicked
+    themeToggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark")
+  
+      // Save preference to localStorage
+      if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark")
+      } else {
+        localStorage.setItem("theme", "light")
+      }
+    })
+  
+    // Smooth scrolling for navigation links
+    document.querySelectorAll("nav a").forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault()
+  
+        const targetId = this.getAttribute("href")
+        const targetElement = document.querySelector(targetId)
+  
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 70, // Adjust for fixed nav
+            behavior: "smooth",
+          })
+        }
+      })
+    })
+  
+    // Add active class to nav links on scroll
+    const sections = document.querySelectorAll("section")
+    const navLinks = document.querySelectorAll("nav a")
+  
+    window.addEventListener("scroll", () => {
+      let current = ""
+  
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop
+        const sectionHeight = section.clientHeight
+  
+        if (pageYOffset >= sectionTop - 100) {
+          current = section.getAttribute("id")
+        }
+      })
+  
+      navLinks.forEach((link) => {
+        link.classList.remove("active")
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active")
+        }
+      })
+    })
+  
+    // Añadir efecto hover a las tarjetas de proyectos
+    // const projectCards = document.querySelectorAll(".project-card") // Remove duplicated declaration
+  
+    projectCards.forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-5px)"
+        card.style.boxShadow = "0 8px 25px var(--shadow-color)"
+      })
+  
+      card.addEventListener("mouseleave", () => {
+        if (!card.classList.contains("active")) {
+          card.style.transform = ""
+          card.style.boxShadow = ""
+        }
+      })
+    })
+  
+    // Añadir efecto hover a los elementos de habilidades
+    const skillItems = document.querySelectorAll(".skill-item")
+    skillItems.forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        item.style.transform = "translateY(-3px)"
+      })
+  
+      item.addEventListener("mouseleave", () => {
+        item.style.transform = ""
+      })
+    })
+  
+    // Detectar cuando el carrusel de tecnologías está en el viewport
+    const techCarousel = document.querySelector(".tech-carousel")
+    if (techCarousel) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.querySelector(".tech-items").style.animationPlayState = "running"
+            } else {
+              entry.target.querySelector(".tech-items").style.animationPlayState = "paused"
+            }
+          })
+        },
+        { threshold: 0.5 },
+      )
+  
+      observer.observe(techCarousel)
+    }
+  })
+  
+  // Objeto con todas las traducciones
+const translations = {
+    es: {
+      // Navegación
+      nav_home: "Inicio",
+      nav_about: "Sobre mí",
+      nav_projects: "Proyectos",
+      nav_skills: "Habilidades",
+      nav_contact: "Contacto",
+  
+      // Encabezado
+      header_title: "Portfolio Web",
+  
+      // Sección de inicio
+      profile_title: "Ing. Guillermo Avila",
+      profile_subtitle: "Ingeniero en Sistemas Computacionales",
+      profile_description: "Desarrollador web e IoT apasionado por crear soluciones innovadoras y eficientes.",
+  
+      // Botones
+      btn_email: "Correo",
+      btn_linkedin: "LinkedIn",
+      btn_github: "GitHub",
+      btn_cv: "Currículum",
+      btn_view_more: "Ver más",
+      btn_view_less: "Ver menos",
+  
+      // Habilidades destacadas
+      skill_web: "Desarrollo web (HTML5, CSS3, JS, PHP, MySQL)",
+      skill_networks: "Configuración y mantenimiento de redes (OLT, ONU)",
+      skill_automation: "Automatización de procesos (CRMINBOX, Wisphub)",
+      skill_english: "Inglés - Nivel B2",
+  
+      // Sección de proyectos
+      projects_title: "Proyectos",
+      project1_title: "Agar.IA",
+      project1_summary: "Sistema de conteo de bacterias en tiempo real con inteligencia artificial",
+      project1_details:
+        "Proyecto hecho en colaboración con la facultad de ciencias bioquímicas de la universidad Itmaz para participar en el Innovatec 2024. Consiste en una aplicación de Python que funciona como un contador de bacterias en cajas petri.",
+  
+      project2_title: "Punto de venta",
+      project2_summary: "Aplicación desktop de sistema de caja hecha con C#",
+      project2_details:
+        "Proyecto hecho como parte de la materia de ingeniería de software. Consiste en un sistema de caja y menú interactivo para que los clientes puedan realizar sus órdenes.",
+  
+      project3_title: "Sistema de gestión de tickets",
+      project3_summary: "Una aplicación web de gestión de tickets hecha con HTML5, CSS, JS, PHP y MySQL",
+      project3_details:
+        "Proyecto hecho para la empresa SE Auditores y Consultores con HTML, CSS, JavaScript y PHP del lado del servidor.",
+  
+      // Sección de habilidades
+      skills_title: "Habilidades",
+      tech_title: "Tecnologías utilizadas",
+  
+      tech1_title: "HTML5",
+      tech1_desc: "Lenguaje de marcado estándar para la web",
+  
+      tech2_title: "CSS3",
+      tech2_desc: "Hojas de estilo en cascada",
+  
+      tech3_title: "JavaScript",
+      tech3_desc: "Lenguaje de programación para interactividad",
+  
+      tech4_title: "PHP",
+      tech4_desc: "Lenguaje de programación del lado del servidor",
+  
+      tech5_title: "MySQL",
+      tech5_desc: "Base de datos relacional",
+  
+      // Footer
+      footer_rights: "Todos los derechos reservados",
+      footer_designed: "Diseñado y desarrollado por Guillermo Avila",
+    },
+    en: {
+      // Navigation
+      nav_home: "Home",
+      nav_about: "About me",
+      nav_projects: "Projects",
+      nav_skills: "Skills",
+      nav_contact: "Contact",
+  
+      // Header
+      header_title: "Web Portfolio",
+  
+      // Home section
+      profile_title: "Guillermo Avila, Engineer",
+      profile_subtitle: "Computer Systems Engineer",
+      profile_description: "Web and IoT developer passionate about creating innovative and efficient solutions.",
+  
+      // Buttons
+      btn_email: "Email",
+      btn_linkedin: "LinkedIn",
+      btn_github: "GitHub",
+      btn_cv: "Resume",
+      btn_view_more: "View more",
+      btn_view_less: "View less",
+  
+      // Highlighted skills
+      skill_web: "Web development (HTML5, CSS3, JS, PHP, MySQL)",
+      skill_networks: "Network configuration and maintenance (OLT, ONU)",
+      skill_automation: "Process automation (CRMINBOX, Wisphub)",
+      skill_english: "English - B2 Level",
+  
+      // Projects section
+      projects_title: "Projects",
+      project1_title: "Agar.IA",
+      project1_summary: "Real-time bacteria counting system with artificial intelligence",
+      project1_details:
+        "Project made in collaboration with the biochemical sciences faculty of Itmaz university to participate in Innovatec 2024. It consists of a Python application that works as a bacteria counter in petri dishes.",
+  
+      project2_title: "Point of Sale",
+      project2_summary: "Desktop cash register application made with C#",
+      project2_details:
+        "Project made as part of the software engineering course. It consists of a cash register system and interactive menu for customers to place their orders.",
+  
+      project3_title: "Ticket Management System",
+      project3_summary: "A web application for ticket management made with HTML5, CSS, JS, PHP and MySQL",
+      project3_details:
+        "Project made for SE Auditores y Consultores company with HTML, CSS, JavaScript and PHP on the server side.",
+  
+      // Skills section
+      skills_title: "Skills",
+      tech_title: "Technologies used",
+  
+      tech1_title: "HTML5",
+      tech1_desc: "Standard markup language for the web",
+  
+      tech2_title: "CSS3",
+      tech2_desc: "Cascading Style Sheets",
+  
+      tech3_title: "JavaScript",
+      tech3_desc: "Programming language for interactivity",
+  
+      tech4_title: "PHP",
+      tech4_desc: "Server-side programming language",
+  
+      tech5_title: "MySQL",
+      tech5_desc: "Relational database",
+  
+      // Footer
+      footer_rights: "All rights reserved",
+      footer_designed: "Designed and developed by Guillermo Avila",
+    },
+  }
+  
+  :root {
+    /* Light theme (default) */
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #ffffff;
+    --bg-accent: #f0f2f5;
+    --text-primary: #333333;
+    --text-secondary: #555555;
+    --text-muted: #6c757d;
+    --accent-color: #0077b6;
+    --accent-hover: #005f92;
+    --border-color: #dee2e6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --card-bg: #ffffff;
+    --header-bg: #0077b6;
+    --header-text: #ffffff;
+    --nav-bg: #005f92;
+    --nav-text: #ffffff;
+    --footer-bg: #343a40;
+    --footer-text: #ffffff;
+  }
+  
+  .dark {
+    /* Dark theme */
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-accent: #2d2d2d;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-muted: #909090;
+    --accent-color: #00a8e8;
+    --accent-hover: #0096cc;
+    --border-color: #444444;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --card-bg: #2d2d2d;
+    --header-bg: #1a1a1a;
+    --header-text: #ffffff;
+    --nav-bg: #252525;
+    --nav-text: #ffffff;
+    --footer-bg: #1a1a1a;
+    --footer-text: #e0e0e0;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Top Controls */
+  .top-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Theme Toggle */
+  .theme-toggle {
+    display: flex;
+  }
+  
+  /* Language Toggle */
+  .language-toggle {
+    display: flex;
+  }
+  
+  #language-toggle-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: background-color 0.3s;
+    position: relative;
+  }
+  
+  #language-toggle-btn:hover {
+    background-color: var(--accent-hover);
+  }
+  
+  #language-toggle-btn .current-lang {
+    font-size: 0.7rem;
+    font-weight: bold;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #language-toggle-btn i {
+    font-size: 1.2rem;
+    margin-top: 8px;
+  }
+  
+  #theme-toggle-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: background-color 0.3s;
+  }
+  
+  #theme-toggle-btn:hover {
+    background-color: var(--accent-hover);
+  }
+  
+  #theme-toggle-btn .fa-sun {
+    display: none;
+  }
+  
+  .dark #theme-toggle-btn .fa-moon {
+    display: none;
+  }
+  
+  .dark #theme-toggle-btn .fa-sun {
+    display: inline-block;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .header-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: var(--nav-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px var(--shadow-color);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+  }
+  
+  nav a {
+    color: var(--nav-text);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .profile-card {
+    display: flex;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-color);
+  }
+  
+  .profile-image {
+    flex: 0 0 300px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .profile-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+  }
+  
+  .profile-info .subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+  }
+  
+  .profile-info .description {
+    margin-bottom: 25px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  .skills-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: var(--bg-accent);
+    border-radius: 6px;
+    transition: transform 0.2s;
+  }
+  
+  .skill-item:hover {
+    transform: translateY(-3px);
+  }
+  
+  .skill-item i {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+  }
+  
+  /* Section Styles */
+  section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    position: relative;
+    color: var(--accent-color);
+  }
+  
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Projects Section */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .project-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden; /* Asegura que los detalles no afecten otras cards */
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .project-header i {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+  }
+  
+  .project-header h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .project-summary {
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+  }
+  
+  .details-toggle {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .details-toggle i {
+    transition: transform 0.3s;
+  }
+  
+  .project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin-top: 15px; /* Espacio entre resumen y detalles */
+  }
+  
+  .project-card.active .project-details {
+    max-height: 500px; /* Altura máxima para los detalles */
+    margin-top: 15px;
+  }
+  
+  .project-card.active .details-toggle i {
+    transform: rotate(180deg);
+  }
+  
+  /* Skills Section */
+  .tech-carousel-container {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+  }
+  
+  .tech-carousel-container h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+  }
+  
+  .tech-carousel {
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+  }
+  
+  .tech-items {
+    display: flex;
+    animation: scroll 30s linear infinite;
+  }
+  
+  .tech-item {
+    flex: 0 0 200px;
+    margin: 0 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .tech-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .tech-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .tech-item h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+  }
+  
+  .tech-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-220px * 5));
+    }
+  }
+  
+  .tech-carousel:hover .tech-items {
+    animation-play-state: paused;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 40px 0;
+    margin-top: 60px;
+  }
+  
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  footer p {
+    margin-bottom: 20px;
+  }
+  
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .contact-links a {
+    color: var(--footer-text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .contact-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .contact-links i {
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .profile-card {
+      flex-direction: column;
+    }
+  
+    .profile-image {
+      flex: 0 0 auto;
+      padding: 30px 30px 0;
+    }
+  
+    .profile-info {
+      padding: 20px 30px 30px;
+    }
+  
+    .skills-highlights {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-wrap: wrap;
+    }
+  
+    nav a {
+      margin: 5px;
+    }
+  
+    .header-content h1 {
+      font-size: 2rem;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .contact-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-links a {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .profile-info h2 {
+      font-size: 1.6rem;
+    }
+  
+    .profile-info .subtitle {
+      font-size: 1rem;
+    }
+  
+    .theme-toggle {
+      top: 10px;
+      right: 10px;
+    }
+  
+    #theme-toggle-btn {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  /* Estilos para los botones de contacto */
+  .contact-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px var(--shadow-color);
+  }
+  
+  .btn i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+  }
+  
+  .btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background-color: var(--bg-accent);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--bg-secondary);
+    transform: translateY(-2px);
+  }
+  
+  

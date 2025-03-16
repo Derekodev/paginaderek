@@ -1,118 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Derek Avila Garcia</title>
-  <style>
-    body {
-      background-color: #000;
-      color: white;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      margin: 0;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    img {
-      border-radius: 50%;
-      border: 5.5px solid #9533d6;
-    }
-    h1, h2 {
-      color: white;
-      text-align: center;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .section {
-      margin-bottom: 20px;
-    }
-    .section-title {
-      color: #9533d6;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .grid-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guillermo Avila Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="container">
-    <h1>Derek Avila Garcia</h1>
-    <h2>Estudiante de Ingeniería en Sistemas Computacionales</h2>
-    <center>
-      <img src="img/427919847_2637014869799306_4727284626233168045_n (1).jpg" 
-           alt="Derek Avila Garcia" width="200px">
-      <img src="img/tecnm.png" alt="TecNM" width="200px">
-      <img src="img/itmaz.png" alt="ITMAZ" width="200px">
-    </center>
-    
-    <div class="section">
-      <div class="section-title">Datos Personales</div>
-      <p>Fecha de nacimiento: 30/11/2001</p>
-      <p>Edad: 22 años</p>
-      <p>Teléfono: (669) 2-06-76-50</p>
-      <p>Email: Derekjagg@gmail.com</p>
+    <div class="top-controls">
+        <div class="language-toggle">
+            <button id="language-toggle-btn" aria-label="Cambiar idioma / Change language">
+                <span class="current-lang">ES</span>
+                <i class="fas fa-language"></i>
+            </button>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
     </div>
+
+    <header>
+        <div class="header-content">
+            <h1>Guillermo Avila</h1>
+            <p data-i18n="header_title">Portfolio Web</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#inicio" data-i18n="nav_home">Inicio</a>
+            <a href="#sobremi" data-i18n="nav_about">Sobre mí</a>
+            <a href="#proyectos" data-i18n="nav_projects">Proyectos</a>
+            <a href="#habilidades" data-i18n="nav_skills">Habilidades</a>
+            <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+        </div>
+    </nav>
     
-    <div class="section">
-      <div class="section-title">Acerca de Mí</div>
-      <p>Soy un estudiante avanzado de la carrera de ING. en Sistemas por el Instituto Tecnológico de Mazatlán bastante interesado en el desarrollo del backend, frontend y otras tecnologías de desarrollo. Cuento con una gran motivación para avanzar en mi carrera profesional y soy una persona amable, comprometida y responsable. Quiero mejorar mis aptitudes y habilidades.</p>
-    </div>
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="container">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="img/PXL_20240215_101848640.jpg" alt="Guillermo Avila" loading="lazy">
+                    </div>
+                    <div class="profile-info">
+                        <h2 data-i18n="profile_title">Ing. Guillermo Avila</h2>
+                        <p class="subtitle" data-i18n="profile_subtitle">Ingeniero en Sistemas Computacionales</p>
+                        <p class="description" data-i18n="profile_description">
+                            Desarrollador web e IoT apasionado por crear soluciones innovadoras y eficientes.
+                        </p>
     
-    <div class="section">
-      <div class="section-title">Educación</div>
-      <p><strong>2020-2024:</strong> Instituto Tecnológico de Mazatlán, Ingeniería en Sistemas (8vo Semestre)</p>
-      <p><strong>2023-2024:</strong> Todo Code Academy, Curso de Bases de Datos (Finalizado)</p>
-      <p><strong>2023-2024:</strong> Fundación Carlos Slim (aprende.org), Curso de Desarrollo Backend (En Curso)</p>
-    </div>
-    
-    <div class="section">
-      <div class="section-title">Descripción de Proyectos</div>
-      <div class="grid-container">
-        <div>
-          <p><strong>2024 - AGAR IA:</strong> En el año 2024 participé en el Inovatec 2024 en colaboración con la facultad de bioquímica del ITMAZ en el cual nuestro proyecto fue desarrollado desde enero de este mismo año. Este consistía en una aplicación con inteligencia artificial capaz de reconocer bacterias en cajas petri, determinar su especie y sus enfermedades.</p>
+                        <!-- Botones de Contacto -->
+                        <div class="contact-buttons">
+                            <a href="mailto:derekjgag@gmail.com" class="btn btn-primary">
+                                <i class="fas fa-envelope"></i> <span data-i18n="btn_email">Correo</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/derek-jes%C3%BAs-guillermo-%C3%A1vila-garc%C3%ADa-12a076261/" target="_blank" class="btn btn-secondary">
+                                <i class="fab fa-linkedin"></i> <span data-i18n="btn_linkedin">LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/Derekodev" target="_blank" class="btn btn-secondary">
+                                <i class="fab fa-github"></i> <span data-i18n="btn_github">GitHub</span>
+                            </a>
+                        </div>
+
+                        <br>
+                        
+                        <div class="skills-highlights">
+                            <div class="skill-item">
+                                <i class="fas fa-code"></i>
+                                <span data-i18n="skill_web">Desarrollo web (HTML5, CSS3, JS, PHP, MySQL)</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-network-wired"></i>
+                                <span data-i18n="skill_networks">Configuración y mantenimiento de redes (OLT, ONU)</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-cogs"></i>
+                                <span data-i18n="skill_automation">Automatización de procesos (CRMINBOX, Wisphub)</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-language"></i>
+                                <span data-i18n="skill_english">Inglés - Nivel B2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="projects-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="projects_title">Proyectos</h2>
+                
+                <div class="projects-grid">
+                    <!-- Proyecto 1: Agar.IA -->
+                    <div class="project-card" id="project1">
+                        <div class="project-header">
+                            <i class="fas fa-vial"></i>
+                            <h3 data-i18n="project1_title">Agar.IA</h3>
+                        </div>
+                        <p class="project-summary" data-i18n="project1_summary">Sistema de conteo de bacterias en tiempo real con inteligencia artificial</p>
+                        <button class="details-toggle" aria-label="Ver detalles">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="project-details">
+                            <p data-i18n="project1_details">
+                                Proyecto hecho en colaboración con la facultad de ciencias bioquímicas de la universidad Itmaz para participar en el Innovatec 2024.
+                                Consiste en una aplicación de Python que funciona como un contador de bacterias en cajas petri.
+                            </p>
+                        </div>
+                    </div>
+                
+                    <!-- Proyecto 2: Punto de Venta -->
+                    <div class="project-card" id="project2">
+                        <div class="project-header">
+                            <i class="fas fa-cash-register"></i>
+                            <h3 data-i18n="project2_title">Punto de venta</h3>
+                        </div>
+                        <p class="project-summary" data-i18n="project2_summary">Aplicación desktop de sistema de caja hecha con C#</p>
+                        <button class="details-toggle" aria-label="Ver detalles">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="project-details">
+                            <p data-i18n="project2_details">
+                                Proyecto hecho como parte de la materia de ingeniería de software.
+                                Consiste en un sistema de caja y menú interactivo para que los clientes puedan realizar sus órdenes.
+                            </p>
+                        </div>
+                    </div>
+                
+                    <!-- Proyecto 3: Sistema de Gestión de Tickets -->
+                    <div class="project-card" id="project3">
+                        <div class="project-header">
+                            <i class="fas fa-ticket-alt"></i>
+                            <h3 data-i18n="project3_title">Sistema de gestión de tickets</h3>
+                        </div>
+                        <p class="project-summary" data-i18n="project3_summary">Una aplicación web de gestión de tickets<br>hecha con HTML5, CSS, JS, PHP y MySQL</p>
+                        <button class="details-toggle" aria-label="Ver detalles">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="project-details">
+                            <p data-i18n="project3_details">
+                                Proyecto hecho para la empresa SE Auditores y Consultores con HTML, CSS, JavaScript y PHP del lado del servidor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="skills-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="skills_title">Habilidades</h2>
+                
+                <div class="tech-carousel-container">
+                    <h3 data-i18n="tech_title">Tecnologías utilizadas</h3>
+                    <div class="tech-carousel">
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <h4 data-i18n="tech1_title">HTML5</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5">
+                                <p data-i18n="tech1_desc">Lenguaje de marcado estándar para la web</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech2_title">CSS3</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3">
+                                <p data-i18n="tech2_desc">Hojas de estilo en cascada</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech3_title">JavaScript</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+                                <p data-i18n="tech3_desc">Lenguaje de programación para interactividad</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech4_title">PHP</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
+                                <p data-i18n="tech4_desc">Lenguaje de programación del lado del servidor</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech5_title">MySQL</h4>
+                                <img src="https://wiki.cifprodolfoucha.es/images/8/8e/Mysql_logo.png" alt="MySQL">
+                                <p data-i18n="tech5_desc">Base de datos relacional</p>
+                            </div>
+
+                            <!-- Duplicados para loop infinito -->
+                            <div class="tech-item">
+                                <h4 data-i18n="tech1_title">HTML5</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5">
+                                <p data-i18n="tech1_desc">Lenguaje de marcado estándar para la web</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech2_title">CSS3</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3">
+                                <p data-i18n="tech2_desc">Hojas de estilo en cascada</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech3_title">JavaScript</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+                                <p data-i18n="tech3_desc">Lenguaje de programación para interactividad</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech4_title">PHP</h4>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
+                                <p data-i18n="tech4_desc">Lenguaje de programación del lado del servidor</p>
+                            </div>
+                            <div class="tech-item">
+                                <h4 data-i18n="tech5_title">MySQL</h4>
+                                <img src="https://wiki.cifprodolfoucha.es/images/8/8e/Mysql_logo.png" alt="MySQL">
+                                <p data-i18n="tech5_desc">Base de datos relacional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="container">
+            <p>&copy; 2025 - <span data-i18n="footer_rights">Todos los derechos reservados</span></p>
+            <div class="contact-links">
+                <a href="mailto:derekjgag@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i> <span data-i18n="btn_email">Correo</span>
+                </a>
+                <a href="https://www.linkedin.com/in/derek-jes%C3%BAs-guillermo-%C3%A1vila-garc%C3%ADa-12a076261/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i> <span data-i18n="btn_linkedin">LinkedIn</span>
+                </a>
+                <a href="https://drive.google.com/tu-curriculum" target="_blank" rel="noopener noreferrer" aria-label="Currículum">
+                    <i class="fas fa-file-alt"></i> <span data-i18n="btn_cv">Currículum</span>
+                </a>
+                <a href="https://github.com/Derekodev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i> <span data-i18n="btn_github">GitHub</span>
+                </a>
+            </div>
         </div>
-        <div>
-          <p><strong>2023 - Punto de Venta Hamburguesas El Punto:</strong> Yo y un compañero realizamos como proyecto semestral un punto de venta para una negocio ficticio de hamburguesas en el cual se aplicó bases de datos y se desarrollaron las operaciones CRUD. El código puede ser visto <a href="https://github.com/JesusCROX/ProyectoJ/tree/main/MODIFI" style="color: #9533d6;">aquí</a>.</p>
-        </div>
-        <div>
-          <p><strong>2018-2020 - Olimpiada Mexicana de Informática:</strong> En el año 2018 participé en la OMI junto a un equipo de programación de la preparatoria Rubén Jaramillo (UAS). De igual forma desde 2018 soy parte de un equipo de programación de él Instituto Tecnológico de Mazatlán.</p>
-        </div>
-        <div>
-          <p><strong>Montaje del Centro de Cómputo Piso 2 de Sistemas:</strong> Mis compañeros de la especialidad de redes e IoT y yo realizamos la actualización del sistema de red de uno de los centros de cómputo, actualizando cableado, switches y asignando IP fijas a cada una de las computadoras de este centro.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="section">
-      <div class="section-title">Conocimientos y Proyectos</div>
-      <div class="grid-container">
-        <div>
-          <ul>
-            <li>C++ (Desarrollo de aplicaciones por consola)</li>
-            <li>Python (Desarrollo del proyecto AGAR IA con inteligencia artificial)</li>
-            <li>C# (Desarrollo de un sistema de ventas como proyecto escolar)</li>
-            <li>Kotlin, PHP y Android Studio (Desarrollo de aplicaciones móviles con conexiones a bases de datos)</li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li>SQL (Bases de datos)</li>
-            <li>PHPMyAdmin (Desarrollo de bases de datos con PHPMyAdmin)</li>
-            <li>Java (Desarrollo de aplicaciones por consola y con interfaces básicas con bases de datos locales)</li>
-            <li>HTML5 y CSS3 (Desarrollo de páginas web con estilos)</li>
-            <li>Arduino (Desarrollo de proyectos de Robótica semestrales)</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Translations (debe cargarse primero) -->
+    <script src="translations.js"></script>
+    <!-- Custom JS (se carga después) -->
+    <script src="script.js"></script>
 </body>
 </html>
+
